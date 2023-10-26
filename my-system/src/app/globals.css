@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+/* ปรับสีตามโหมดการเลือกสี */
+@media (prefers-color-scheme: light) {
+  :root {
+    --foreground-rgb: 0, 0, 0; /* สีตัวหนังสือใน light mode */
+    --background-start-rgb: 255, 255, 255; /* สีพื้นหลังเริ่มต้นใน light mode */
+    --background-end-rgb: 255, 255, 255; /* สีพื้นหลังสิ้นสุดใน light mode */
+  }
+}
+
+/* ปรับสีตามโหมดการเลือกสีใน dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255; /* สีตัวหนังสือใน dark mode */
+    --background-start-rgb: 0, 0, 0; /* สีพื้นหลังเริ่มต้นใน dark mode */
+    --background-end-rgb: 0, 0, 0; /* สีพื้นหลังสิ้นสุดใน dark mode */
+  }
+}
+
+
+body {
+  background-image: url('https://png.pngtree.com/background/20210716/original/pngtree-a-black-hole-in-the-starlight-of-universe-picture-image_1332410.jpg');
+  background-size: cover; /* ปรับขนาดรูปภาพให้ครอบเต็มพื้นหลัง */
+  background-repeat: no-repeat; /* ไม่ทำซ้ำรูปภาพ */
+  background-attachment: fixed; /* รูปภาพติดตามหน้าจอเมื่อเลื่อนลง */
+  background-position: center; /* ตำแหน่งรูปภาพในพื้นหลัง */
+  color: #ffffff; /* สีตัวหนังสือ */
+}
+
